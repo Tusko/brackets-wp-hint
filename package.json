@@ -1,0 +1,12 @@
+{
+    "name": "brackets-wp-func-hint",
+    "title": "Wordpress Functions Hint",
+    "description": "WP Functions Hint - plugin for Brackets, which will help you in writing Wordpress Themes/Plugins",
+    "homepage": "http://frontend.im/brackets/",
+    "version": "1.0.0",
+    "author": "Tusko Trush <tusko@photoinside.me> (http://frontend.im/)",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=0.41.0"
+    }
+}
