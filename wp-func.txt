@@ -941,6 +941,8 @@ have_rows('repeater_field_name', $post->ID)
 the_row()
 the_sub_field('sub_field_name')
 get_sub_field('sub_field_name')
+acf_add_options_page()
+acf_add_options_sub_page()
 
 activated_plugin
 activate_blog
@@ -2828,3 +2830,7 @@ wp_validate_boolean
 _update_posts_count_on_delete
 _update_posts_count_on_transition_post_status
 _wp_handle_upload
+
+get_post_meta($id, '_wp_attachment_image_alt', true)
+
+var_dump();

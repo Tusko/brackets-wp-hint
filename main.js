@@ -28,9 +28,9 @@ define(function (require, exports, module) {
         this.lastFileName = "";
         this.cachedMatches = [];
         this.cachedWordList = [];
-        this.tokenDefinition = /[a-zA-Z][(_a-zA-Z0-9$,' )]{2,}/g;
+        this.tokenDefinition = /.{2,}/g;
         //this.currentTokenDefinition = /[a-zA-Z][a-zA-Z0-9_]+$/g;
-        this.currentTokenDefinition = /[a-zA-Z][a-zA-Z0-9_]+$/g;
+        this.currentTokenDefinition = /.{2,}/g;
     }
     
     
