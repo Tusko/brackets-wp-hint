@@ -2834,3 +2834,8 @@ _wp_handle_upload
 get_post_meta($id, '_wp_attachment_image_alt', true)
 
 var_dump();
+print_r()
+if() {}
+foreach(){}
+endwhile;
+endif;
