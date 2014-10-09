@@ -2,7 +2,7 @@
     "name": "brackets-wp-functions-hint",
     "title": "Brackets Wordpress Hint",
     "description": "Brackets Wordpress Hint - plugin for Brackets, which will help you in writing Wordpress Themes/Plugins",
-    "homepage": "https://github.com/Tusko/brackets-wp-lint/",
+    "homepage": "https://github.com/Tusko/brackets-wp-hint/",
     "version": "1.0.1",
     "author": "Tusko Trush <tusko@photoinside.me> (http://frontend.im/)",
     "license": "MIT",
