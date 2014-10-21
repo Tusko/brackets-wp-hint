@@ -2831,11 +2831,47 @@ _update_posts_count_on_delete
 _update_posts_count_on_transition_post_status
 _wp_handle_upload
 
+async_update_translation
+attach_session_information
+customize_control_active
+human_time_diff
+oembed_remote_get_args
+oembed_ttl
+run_wptexturize
+session_token_manager
+term_search_min_chars
+translations_api
+translations_api_result
+wp_editor_expand
+wp_editor_settings
+wp_embed_handler_youtube
+wp_list_comments_args
+wp_spaces_regexp
+wp_title_parts
+wxr_export_skip_commentmeta
+
 get_post_meta($id, '_wp_attachment_image_alt', true)
+
+$wp_customize->add_panel('name', array($args));
+$wp_customize->add_section('name', array($args));
+$wp_customize->add_control('name', array($args));
+$wp_customize->add_setting('name', array($args));
+$wp_customize->get_panel( $id );
+$wp_customize->remove_panel( $id );
+
+Walker
+Walker_Category
+Walker_Category_Checklist
+Walker_CategoryDropdown
+Walker_Comment
+Walker_Nav_Menu
+Walker_Nav_Menu_Checklist
+Walker_Nav_Menu_Edit
+Walker_Page
+Walker_PageDropDown
 
 var_dump();
 print_r()
-if() {}
 foreach(){}
 endwhile;
 endif;
