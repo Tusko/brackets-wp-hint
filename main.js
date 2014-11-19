@@ -148,6 +148,6 @@ define(function (require, exports, module) {
     
     AppInit.appReady(function () {
         var wpHints = new WPhints();
-        CodeHintManager.registerHintProvider(wpHints, ["all"], 0);
+        CodeHintManager.registerHintProvider(wpHints, ["php"], 10);
     });
 });
