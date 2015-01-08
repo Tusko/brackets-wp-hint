@@ -71,7 +71,7 @@ define(function (require, exports, module) {
         if(symbolBeforeCursorArray){
             // find if the half-word inputed is in the list
             for(var i in this.cachedWordList){
-                if(this.cachedWordList[i].indexOf(symbolBeforeCursorArray[0])==0){
+                if(typeof this.cachedWordList[i] === 'string' && this.cachedWordList[i].indexOf(symbolBeforeCursorArray[0])==0){
                     return true;  
                 }
             }
@@ -111,7 +111,7 @@ define(function (require, exports, module) {
         var symbolBeforeCursorArray = textBeforeCursor.match(this.currentTokenDefinition);
         var hintList = [];
         for(var i in this.cachedWordList){
-            if(this.cachedWordList[i].indexOf(symbolBeforeCursorArray[0])==0){
+            if(typeof this.cachedWordList[i] === 'string' && this.cachedWordList[i].indexOf(symbolBeforeCursorArray[0])==0){
                 hintList.push(this.cachedWordList[i]);
             }
         }
