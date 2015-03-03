@@ -1918,7 +1918,6 @@ permalink_structure_changed
 personal_options
 personal_options_update
 phone_content
-phpmailer_init
 pingback_ping_source_uri
 pingback_post
 pingback_useragent
