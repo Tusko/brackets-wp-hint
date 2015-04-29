@@ -17,8 +17,6 @@ define(function (require, exports, module) {
         cachedWordList,
         tokenDefinition,
         currentTokenDefinition;
-       // CSSProperties       = require("text!CSSProperties.json"),
-       // properties          = JSON.parse(CSSProperties);
     
     /**
      * @constructor
