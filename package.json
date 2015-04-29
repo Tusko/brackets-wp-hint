@@ -3,14 +3,14 @@
     "title": "Brackets Wordpress Hint",
     "description": "Brackets Wordpress Hint - plugin for Brackets, which will help you in writing Wordpress Themes/Plugins (WooCommerce included)",
     "homepage": "https://github.com/Tusko/brackets-wp-hint/",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "author": "Tusko Trush <tusko@photoinside.me> (http://frontend.im/)",
     "license": "MIT",
     "keywords": [
         "wordpress",
         "php",
         "hint",
-		"woocommerce"
+        "woocommerce"
     ],
     "engines": {
         "brackets": ">=0.41.0"

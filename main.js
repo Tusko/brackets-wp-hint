@@ -6,12 +6,9 @@ define(function (require, exports, module) {
 
     var AppInit             = brackets.getModule("utils/AppInit"),
         CodeHintManager     = brackets.getModule("editor/CodeHintManager"),
-        LanguageManager     = brackets.getModule("language/LanguageManager");
-    
-    var AppInit = brackets.getModule('utils/AppInit'),
-        WPfuncHint = require('text!wp-func.txt');
-    
-    var lastLine,
+        LanguageManager     = brackets.getModule("language/LanguageManager"),
+		WPfuncHint = require('text!wp-func.txt')
+		lastLine,
         lastFileName,
         cachedMatches,
         cachedWordList,
@@ -80,8 +77,6 @@ define(function (require, exports, module) {
     };
        
     /**
-     * Returns a list of availble CSS propertyname or -value hints if possible for the current editor context. 
-     * 
      * @param {Editor} implicitChar 
      * Either null, if the hinting request was explicit, or a single character
      * that represents the last insertion and that indicates an implicit
@@ -139,8 +134,6 @@ define(function (require, exports, module) {
         var indexOfTheSymbol = textBeforeCursor.search(this.currentTokenDefinition);
         var replaceStart = {line:cursor.line,ch:indexOfTheSymbol};
         this.editor.document.replaceRange(hint, replaceStart, cursor);
-        
-        
         return false;
     };
     
