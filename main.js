@@ -2,13 +2,17 @@
 /*global define, brackets, $, window */
 
 define(function (require, exports, module) {
+    
     "use strict";
 
     var AppInit             = brackets.getModule("utils/AppInit"),
         CodeHintManager     = brackets.getModule("editor/CodeHintManager"),
-        LanguageManager     = brackets.getModule("language/LanguageManager"),
-		WPfuncHint = require('text!wp-func.txt')
-		lastLine,
+        LanguageManager     = brackets.getModule("language/LanguageManager");
+    
+    var AppInit = brackets.getModule('utils/AppInit'),
+        WPfuncHint = require('text!wp-func.txt');
+    
+    var lastLine,
         lastFileName,
         cachedMatches,
         cachedWordList,
@@ -66,7 +70,7 @@ define(function (require, exports, module) {
         if(symbolBeforeCursorArray){
             // find if the half-word inputed is in the list
             for(var i in this.cachedWordList){
-                if(typeof this.cachedWordList[i] === 'string' && this.cachedWordList[i].indexOf(symbolBeforeCursorArray[0])==0){
+                if(this.cachedWordList[i].indexOf(symbolBeforeCursorArray[0])==0){
                     return true;  
                 }
             }
