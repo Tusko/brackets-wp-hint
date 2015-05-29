@@ -1,4 +1,4 @@
- _get_term_children()
+_get_term_children()
 $wp_customize->add_control('name', array($args));
 $wp_customize->add_panel('name', array($args));
 $wp_customize->add_section('name', array($args));
@@ -70,13 +70,11 @@ add_meta_boxes_{$post_type}
 add_new_user_to_blog()
 add_node()
 add_object_page()
-add_option
 add_option()
 add_option_{$name}
 add_option_{$option}
 add_options_page()
 add_pages_page()
-add_ping
 add_ping()
 add_plugins_page()
 add_post_meta()
@@ -90,7 +88,6 @@ add_settings_field()
 add_settings_section()
 add_shortcode()
 add_signup_meta
-add_site_option
 add_site_option()
 add_site_option_{$key}
 add_site_option_{$option}
@@ -104,7 +101,6 @@ add_theme_support()
 add_to_cart_fragments()
 add_to_cart_redirect()
 add_user_meta()
-add_user_to_blog
 add_user_to_blog()
 add_users_page()
 add_utility_page()
@@ -165,11 +161,9 @@ admin_print_styles-widgets-php
 admin_print_styles-{$hook_suffix}
 admin_print_styles{$hook_suffix}
 admin_title
-admin_url
 admin_url()
 admin_user_info_links
 admin_xml_ns
-adminmenu
 after-{$taxonomy}-table
 after_db_upgrade
 after_delete_post
@@ -227,7 +221,6 @@ apply_filters()
 apply_filters_ref_array()
 archive_blog
 async_update_translation
-async_update_translation
 async_upload_{$type}
 atom_author
 atom_comments_ns
@@ -238,7 +231,6 @@ atom_ns
 atom_service_url
 atompub_create_post
 atompub_put_post
-attach_session_information
 attach_session_information
 attachment_fields_to_edit
 attachment_fields_to_save
@@ -484,7 +476,6 @@ custom_header_options
 custom_menu_order
 customize_allowed_urls
 customize_control_active
-customize_control_active
 customize_controls_enqueue_scripts
 customize_controls_init
 customize_controls_print_footer_scripts
@@ -723,8 +714,6 @@ ent2ncr()
 enter_title_here
 esc_attr()
 esc_attr__()
-esc_attr__()
-esc_attr_e()
 esc_attr_e()
 esc_html
 esc_html()
@@ -793,13 +782,10 @@ get_admin_users_for_domain()
 get_all_category_ids()
 get_all_page_ids()
 get_alloptions()
-get_ancestors
-get_ancestors()
 get_ancestors()
 get_approved_comments()
 get_archive_template()
 get_archives_link
-get_attached_file
 get_attached_file()
 get_attached_media
 get_attached_media_args
@@ -807,7 +793,6 @@ get_attachment_template()
 get_author_feed_link()
 get_author_posts_url()
 get_author_template()
-get_avatar
 get_avatar()
 get_avatar_comment_types
 get_blog_count()
@@ -821,23 +806,17 @@ get_blogaddress_by_domain()
 get_blogaddress_by_id()
 get_blogaddress_by_name()
 get_bloginfo()
-get_bloginfo_rss
 get_bloginfo_rss()
-get_blogs_of_user
 get_blogs_of_user()
 get_body_class()
 get_bookmark()
-get_bookmarks
 get_bookmarks()
 get_boundary_post()
-get_calendar
 get_calendar()
 get_cat_ID()
 get_cat_name()
-get_categories
 get_categories()
 get_categories_taxonomy
-get_category
 get_category()
 get_category_by_path()
 get_category_by_slug()
@@ -846,9 +825,7 @@ get_category_link()
 get_category_parents()
 get_category_template()
 get_children()
-get_comment
 get_comment()
-get_comment_author
 get_comment_author()
 get_comment_author_email
 get_comment_author_IP
@@ -856,17 +833,13 @@ get_comment_author_link
 get_comment_author_rss()
 get_comment_author_url
 get_comment_author_url_link
-get_comment_date
 get_comment_date()
 get_comment_excerpt
 get_comment_ID
-get_comment_link
 get_comment_link()
 get_comment_meta()
 get_comment_pages_count()
-get_comment_text
 get_comment_text()
-get_comment_time
 get_comment_time()
 get_comment_type
 get_comments()
@@ -885,27 +858,21 @@ get_date_from_gmt()
 get_date_sql
 get_date_template()
 get_day_link()
-get_delete_post_link
 get_delete_post_link()
 get_dirsize()
 get_edit_bookmark_link
 get_edit_comment_link
-get_edit_post_link
 get_edit_post_link()
 get_edit_tag_link
-get_edit_term_link
 get_edit_term_link()
 get_edit_user_link
 get_editable_authors
 get_editor_stylesheets
-get_enclosed
 get_enclosed()
 get_extended()
 get_field('field_name', $post->ID)
-get_footer
 get_footer()
 get_gmt_from_date()
-get_header
 get_header()
 get_header_image()
 get_header_textcolor()
@@ -915,14 +882,11 @@ get_image_tag
 get_image_tag_class
 get_last_updated()
 get_lastcommentmodified()
-get_lastpostdate
 get_lastpostdate()
-get_lastpostmodified
 get_lastpostmodified()
 get_locale()
 get_locale_stylesheet_uri()
 get_media_item_args
-get_meta_sql
 get_meta_sql()
 get_month_link()
 get_most_recent_post_of_user()
@@ -947,7 +911,6 @@ get_page_template()
 get_page_uri()
 get_paged_template()
 get_pagenum_link
-get_pages
 get_pages()
 get_permalink()
 get_plugin_data()
@@ -964,7 +927,6 @@ get_post_format()
 get_post_galleries
 get_post_gallery
 get_post_meta($id, '_wp_attachment_image_alt', true)
-get_post_meta()
 get_post_mime_type()
 get_post_modified_time
 get_post_stati()
@@ -987,7 +949,6 @@ get_previous_posts_link()
 get_product()
 get_product_search_form()
 get_profile()
-get_pung
 get_pung()
 get_query_template()
 get_query_var()
@@ -997,15 +958,12 @@ get_rss()
 get_sample_permalink_html
 get_search_comments_feed_link()
 get_search_feed_link()
-get_search_form
-get_search_form
 get_search_form()
 get_search_query
 get_search_template()
 get_settings_errors()
 get_shortcode_regex()
 get_shortlink
-get_sidebar
 get_sidebar()
 get_single_template()
 get_site_allowed_themes()
@@ -1013,7 +971,6 @@ get_site_option()
 get_site_transient()
 get_site_url()
 get_sitestats()
-get_space_allowed
 get_space_allowed()
 get_space_used()
 get_stylesheet()
@@ -1026,7 +983,6 @@ get_super_admins()
 get_tag()
 get_tag_link()
 get_tag_template()
-get_tags
 get_tags()
 get_tax_sql()
 get_taxonomies()
@@ -1037,7 +993,6 @@ get_template_directory()
 get_template_directory_uri()
 get_template_part()
 get_template_part_{$slug}
-get_term
 get_term()
 get_term_by()
 get_term_children()
@@ -1048,38 +1003,30 @@ get_terms_args
 get_terms_fields
 get_terms_orderby
 get_the_archive_description
-get_the_archive_title
 get_the_archive_title()
 get_the_author()
 get_the_author_meta()
 get_the_author_posts()
 get_the_author_{$field}
-get_the_categories
+get_the_categories()
 get_the_category()
 get_the_category_by_ID()
 get_the_category_list()
 get_the_category_rss()
 get_the_content()
-get_the_date
 get_the_date()
-get_the_excerpt
 get_the_excerpt()
 get_the_generator_{$type}
 get_the_guid
 get_the_ID()
-get_the_ID()
 get_the_modified_author()
 get_the_modified_date
-get_the_modified_time
 get_the_modified_time()
 get_the_post_thumbnail()
 get_the_tag_list()
-get_the_tags
 get_the_tags()
 get_the_term_list()
-get_the_terms
 get_the_terms()
-get_the_time
 get_the_time()
 get_the_title()
 get_the_title_rss()
@@ -1103,7 +1050,6 @@ get_user_meta()
 get_user_option()
 get_user_option_{$option}
 get_userdata()
-get_usernumposts
 get_usernumposts()
 get_users()
 get_users_drafts
@@ -1132,7 +1078,6 @@ got_rewrite
 got_url_rewrite
 graceful_fail
 graceful_fail_template
-grant_super_admin
 grant_super_admin()
 granted_super_admin
 has_action()
@@ -1142,10 +1087,8 @@ has_nav_menu()
 has_post_format()
 has_post_thumbnail()
 has_tag()
-has_tag()
 has_term()
 have_comments()
-have_posts()
 have_posts()
 have_rows('repeater_field_name', $post->ID)
 header_image()
@@ -1160,7 +1103,6 @@ heartbeat_tick
 hidden_meta_boxes
 hierarchical_post_types
 home_template
-home_url
 home_url()
 htmledit_pre
 htmlentities2()
@@ -1182,7 +1124,6 @@ http_transport_get_debug
 http_transport_post_debug
 https_local_ssl_verify
 https_ssl_verify
-human_time_diff
 human_time_diff
 human_time_diff()
 icon_dir
@@ -1223,7 +1164,6 @@ import_upload_size_limit()
 in_admin_footer
 in_admin_header
 in_category()
-in_category()
 in_plugin_update_message-{$file}
 in_the_loop()
 in_theme_update_message-{$theme_key}
@@ -1256,7 +1196,6 @@ intermediate_image_sizes
 intermediate_image_sizes_advanced
 is_404()
 is_account_page()
-is_active_sidebar
 is_active_sidebar()
 is_active_widget()
 is_add_payment_method_page()
@@ -1266,12 +1205,10 @@ is_ajax()
 is_archive()
 is_archived()
 is_attachment()
-is_attachment()
 is_author()
 is_blog_installed()
 is_blog_user()
 is_cart()
-is_category()
 is_category()
 is_checkout()
 is_checkout_pay_page()
@@ -1300,7 +1237,6 @@ is_new_day()
 is_object_in_term()
 is_order_received_page()
 is_page()
-is_page()
 is_page_template()
 is_paged()
 is_plugin_active()
@@ -1322,22 +1258,18 @@ is_serialized()
 is_serialized_string()
 is_shop()
 is_single()
-is_single()
 is_singular()
 is_ssl()
-is_sticky()
 is_sticky()
 is_store_notice_showing()
 is_subdomain_install()
 is_super_admin()
-is_tag()
 is_tag()
 is_tax()
 is_taxonomy()
 is_taxonomy_hierarchical()
 is_term()
 is_time()
-is_trackback()
 is_trackback()
 is_upload_space_available()
 is_user_logged_in()
@@ -1347,13 +1279,11 @@ is_user_spammy()
 is_wc_endpoint_url()
 is_wide_widget_in_customizer
 is_woocommerce()
-is_woocommerce()
 is_wp_error()
 is_year()
 iso8601_timezone_to_offset()
 iso8601_to_datetime()
 jpeg_quality
-js_escape
 js_escape()
 kses_allowed_protocols
 kubrick_header_color
@@ -1587,9 +1517,7 @@ oembed_fetch_url
 oembed_linktypes
 oembed_providers
 oembed_remote_get_args
-oembed_remote_get_args
 oembed_result
-oembed_ttl
 oembed_ttl
 oocommerce_before_add_to_cart_form()
 opml_head
@@ -1837,7 +1765,6 @@ private_to_published
 process_text_diff_html
 product_type_options()
 product_type_selector()
-product_type_selector()
 product_variation_linked()
 profile_personal_options
 profile_update
@@ -1954,7 +1881,6 @@ rss_tag_pre
 rss_update_frequency
 rss_update_period
 run_wptexturize
-run_wptexturize
 safe_style_css
 salt
 sanitize_comment_cookies
@@ -2010,7 +1936,6 @@ self_link
 send_confirmation_on_profile_email()
 send_core_update_notification_email
 send_headers
-session_token_manager
 session_token_manager
 set-screen-option
 set_auth_cookie
@@ -2147,7 +2072,6 @@ term_link
 term_links-{$taxonomy}
 term_name
 term_search_min_chars
-term_search_min_chars
 term_updated_messages
 term_{$field}
 term_{$field}_rss
@@ -2182,7 +2106,6 @@ the_excerpt_rss()
 the_feed_link
 the_field('field_name', $post->ID)
 the_generator
-the_ID()
 the_ID()
 the_meta_key
 the_modified_author
@@ -2255,9 +2178,6 @@ transient_{$transient}
 transition_comment_status
 transition_post_status
 translations_api
-translations_api
-translations_api
-translations_api_result
 translations_api_result
 trash_comment
 trash_post
@@ -2383,7 +2303,6 @@ user_jabber_label
 user_new_form
 user_new_form_tag
 user_pass_ok()
-user_pass_ok()
 user_profile_update_errors
 user_register
 user_registration_email
@@ -2425,7 +2344,6 @@ Walker_PageDropDown
 wc_add_notice()
 wc_add_order_item()
 wc_add_order_item_meta()
-wc_add_to_cart_message()
 wc_add_to_cart_message()
 wc_admin_reports_path()
 wc_attribute_label()
@@ -2482,7 +2400,6 @@ wc_get_core_supported_themes()
 wc_get_coupon_type()
 wc_get_coupon_types()
 wc_get_customer_available_downloads()
-wc_get_customer_available_downloads()
 wc_get_dimension()
 wc_get_endpoint_url()
 wc_get_featured_product_ids()
@@ -2505,8 +2422,6 @@ wc_get_product_terms()
 wc_get_product_types()
 wc_get_tax_class_by_tax_id()
 wc_get_template()
-wc_get_template()
-wc_get_template_part()
 wc_get_template_part()
 wc_get_weight()
 wc_has_notice()
@@ -2531,12 +2446,10 @@ wc_placeholder_img()
 wc_placeholder_img_src()
 wc_prepare_attachment_for_js()
 wc_price()
-wc_price()
 wc_print_js()
 wc_print_notice()
 wc_print_notices()
 wc_processing_order_count()
-wc_product_dimensions_enabled()
 wc_product_dimensions_enabled()
 wc_product_dropdown_categories()
 wc_product_enable_dimensions_display()
@@ -2544,8 +2457,6 @@ wc_product_has_unique_sku()
 wc_product_post_class()
 wc_product_post_type_link()
 wc_product_sku_enabled()
-wc_product_sku_enabled()
-wc_product_weight_enabled()
 wc_product_weight_enabled()
 wc_products_rss_feed()
 wc_protected_product_add_to_cart()
@@ -2605,7 +2516,6 @@ widgets_init
 woocommece_webhook_name()
 woocommerce_add_cart_item()
 woocommerce_add_cart_item_data()
-woocommerce_add_message()
 woocommerce_add_message()
 woocommerce_add_notice_type()
 woocommerce_add_order_fee_meta()
@@ -2691,7 +2601,6 @@ woocommerce_api_default_response_handler()
 woocommerce_api_delete_order()
 woocommerce_api_delete_order_note()
 woocommerce_api_delete_webhook()
-woocommerce_api_dispatch_args()
 woocommerce_api_dispatch_args()
 woocommerce_api_edit_coupon()
 woocommerce_api_edit_order()
@@ -2799,7 +2708,6 @@ woocommerce_cart_item_name()
 woocommerce_cart_item_price()
 woocommerce_cart_item_product()
 woocommerce_cart_item_product_id()
-woocommerce_cart_item_product_id()
 woocommerce_cart_item_quantity()
 woocommerce_cart_item_remove_link()
 woocommerce_cart_item_subtotal()
@@ -2886,7 +2794,6 @@ woocommerce_countries_shipping_to_prefix()
 woocommerce_countries_tax_or_vat()
 woocommerce_country_locale_field_selectors()
 woocommerce_coupon_code()
-woocommerce_coupon_code()
 woocommerce_coupon_code_query()
 woocommerce_coupon_data_tabs()
 woocommerce_coupon_discount_amount_html()
@@ -2895,7 +2802,6 @@ woocommerce_coupon_error()
 woocommerce_coupon_get_discount_amount()
 woocommerce_coupon_is_valid()
 woocommerce_coupon_is_valid_for_cart()
-woocommerce_coupon_is_valid_for_product()
 woocommerce_coupon_is_valid_for_product()
 woocommerce_coupon_loaded()
 woocommerce_coupon_message()
@@ -2934,7 +2840,6 @@ woocommerce_default_product_tabs()
 woocommerce_delete_order_item()
 woocommerce_delete_order_items()
 woocommerce_delete_shop_order_transients()
-woocommerce_demo_store()
 woocommerce_demo_store()
 woocommerce_disable_admin_bar()
 woocommerce_docs_url()
@@ -3016,7 +2921,6 @@ woocommerce_get_page_page_id()
 woocommerce_get_price()
 woocommerce_get_price_excluding_tax()
 woocommerce_get_price_html()
-woocommerce_get_price_html()
 woocommerce_get_price_including_tax()
 woocommerce_get_price_suffix()
 woocommerce_get_product_from_item()
@@ -3062,7 +2966,6 @@ woocommerce_locate_core_template()
 woocommerce_locate_template()
 woocommerce_logged_out_hidden_page_ids()
 woocommerce_login_credentials()
-woocommerce_login_form()
 woocommerce_login_form()
 woocommerce_login_form_end()
 woocommerce_login_form_start()
@@ -3148,7 +3051,6 @@ woocommerce_order_is_download_permitted()
 woocommerce_order_item_class()
 woocommerce_order_item_display_meta_value()
 woocommerce_order_item_name()
-woocommerce_order_item_name()
 woocommerce_order_item_needs_processing()
 woocommerce_order_item_product()
 woocommerce_order_item_quantity()
@@ -3177,7 +3079,6 @@ woocommerce_output_product_data_tabs()
 woocommerce_output_related_products()
 woocommerce_output_related_products_args()
 woocommerce_package_rates()
-woocommerce_page_title()
 woocommerce_page_title()
 woocommerce_pagination()
 woocommerce_pagination_args()
@@ -3278,10 +3179,8 @@ woocommerce_product_review_list_args()
 woocommerce_product_reviews_tab()
 woocommerce_product_set_stock()
 woocommerce_product_set_stock_status()
-woocommerce_product_set_stock_status()
 woocommerce_product_set_visibility()
 woocommerce_product_settings()
-woocommerce_product_single_add_to_cart_text()
 woocommerce_product_single_add_to_cart_text()
 woocommerce_product_subcategories()
 woocommerce_product_subcategories_args()
@@ -3374,7 +3273,6 @@ woocommerce_shipping_calculator()
 woocommerce_shipping_calculator_enable_city()
 woocommerce_shipping_calculator_enable_postcode()
 woocommerce_shipping_chosen_method()
-woocommerce_shipping_id_is_available()
 woocommerce_shipping_id_is_available()
 woocommerce_shipping_init()
 woocommerce_shipping_method_chosen()
@@ -3598,14 +3496,10 @@ wp_dropdown_users()
 wp_edit_nav_menu_walker
 wp_editor()
 wp_editor_expand
-wp_editor_expand
 wp_editor_set_quality
-wp_editor_settings
 wp_editor_settings
 wp_embed_handler_audio
 wp_embed_handler_video
-wp_embed_handler_youtube
-wp_embed_handler_youtube
 wp_embed_handler_youtube
 wp_enqueue_editor
 wp_enqueue_media
@@ -3741,7 +3635,6 @@ wp_list_categories
 wp_list_categories()
 wp_list_comments()
 wp_list_comments_args
-wp_list_comments_args
 wp_list_pages
 wp_list_pages()
 wp_list_pages_excludes
@@ -3793,7 +3686,6 @@ wp_notify_postauthor()
 wp_oembed_remove_provider()
 wp_original_referer_field()
 wp_page_menu
-wp_page_menu()
 wp_page_menu()
 wp_page_menu_args
 wp_parse_args()
@@ -3857,8 +3749,6 @@ wp_setup_nav_menu_item
 wp_signon()
 wp_signup_location
 wp_spaces_regexp
-wp_spaces_regexp
-wp_spaces_regexp
 wp_specialchars()
 wp_sprintf
 wp_sprintf_l
@@ -3874,7 +3764,6 @@ wp_thumbnail_max_side_length
 wp_tiny_mce_init
 wp_title
 wp_title()
-wp_title_parts
 wp_title_parts
 wp_title_rss
 wp_trash_post
@@ -3973,7 +3862,6 @@ wpmueditblogaction
 wptexturize()
 wpview_media_sandbox_styles
 wxr_export_skip_commentmeta
-wxr_export_skip_commentmeta
 wxr_export_skip_postmeta
 xmlrpc_allow_anonymous_comments
 xmlrpc_blog_options
@@ -4037,7 +3925,6 @@ zeroise()
 {$permastructname}_rewrite_rules
 {$prefix}plugin_action_links
 {$prefix}plugin_action_links_{$plugin_file}
-{$tag}
 {$tag}
 {$taxonomy}_add_form
 {$taxonomy}_add_form_fields
