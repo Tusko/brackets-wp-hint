@@ -243,6 +243,7 @@ attachment_max_dims
 attachment_submitbox_misc_actions
 attachment_thumbnail_args
 attachment_url_to_postid
+attachment_url_to_postid()
 attribute_escape
 attribute_escape()
 audio_send_to_editor_url
@@ -603,8 +604,8 @@ do_enclose()
 do_feed()
 do_feed_atom()
 do_feed_rdf()
-do_feed_rss2()
 do_feed_rss()
+do_feed_rss2()
 do_meta_boxes
 do_mu_upgrade
 do_parse_request
@@ -829,6 +830,7 @@ get_comments()
 get_comments_link
 get_comments_number
 get_comments_number_text
+get_comments_number_text()
 get_comments_pagenum_link
 get_comments_popup_template()
 get_current_site()
@@ -852,6 +854,7 @@ get_edit_term_link()
 get_edit_user_link
 get_editable_authors
 get_editor_stylesheets
+get_editor_stylesheets()
 get_enclosed()
 get_extended()
 get_field('field_name', $post->ID)
@@ -1199,6 +1202,7 @@ is_checkout_pay_page()
 is_child_theme()
 is_comments_popup()
 is_customize_preview
+is_customize_preview()
 is_date()
 is_day()
 is_dynamic_sidebar()
@@ -2112,6 +2116,7 @@ transient_{$transient}
 transition_comment_status
 transition_post_status
 translations_api
+translations_api()
 translations_api_result
 trash_comment
 trash_post
@@ -2189,6 +2194,7 @@ updated_postmeta
 updated_usermeta
 updated_{$meta_type}_meta
 upgrade_400
+upgrade_400()
 upgrader_clear_destination
 upgrader_post_install
 upgrader_pre_download
@@ -3335,9 +3341,11 @@ wp_ajax_crop_image()
 wp_ajax_destroy_sessions()
 wp_ajax_nopriv_{$action}
 wp_ajax_parse_embed
+wp_ajax_parse_embed()
 wp_ajax_press_this_add_category()
 wp_ajax_press_this_save_post()
 wp_ajax_set_attachment_thumbnail
+wp_ajax_set_attachment_thumbnail()
 wp_ajax_update_plugin()
 wp_ajax_{$action}
 wp_allow_comment()
@@ -3363,6 +3371,7 @@ wp_cache_reset()
 wp_cache_set()
 wp_cache_themes_persistently
 wp_can_install_language_pack
+wp_can_install_language_pack()
 wp_category_checklist()
 wp_check_filetype()
 wp_check_filetype_and_ext
@@ -3409,17 +3418,22 @@ wp_dequeue_style()
 wp_deregister_script()
 wp_deregister_style()
 wp_destroy_all_sessions
+wp_destroy_all_sessions()
 wp_destroy_current_session
+wp_destroy_current_session()
 wp_destroy_other_sessions
+wp_destroy_other_sessions()
 wp_die()
 wp_die_ajax_handler
 wp_die_app_handler
 wp_die_handler
 wp_die_xmlrpc_handler
 wp_download_language_pack
+wp_download_language_pack()
 wp_dropdown_categories()
 wp_dropdown_cats
 wp_dropdown_languages
+wp_dropdown_languages()
 wp_dropdown_pages()
 wp_dropdown_users()
 wp_edit_attachments_query_vars()
@@ -3431,6 +3445,7 @@ wp_editor_settings
 wp_embed_handler_audio
 wp_embed_handler_video
 wp_embed_handler_youtube
+wp_embed_handler_youtube()
 wp_encode_emoji()
 wp_enqueue_editor
 wp_enqueue_media
@@ -3450,6 +3465,7 @@ wp_generate_attachment_metadata()
 wp_generate_tag_cloud()
 wp_generator_type
 wp_get_all_sessions
+wp_get_all_sessions()
 wp_get_archives()
 wp_get_attachment_id3_keys
 wp_get_attachment_image()
@@ -3461,6 +3477,7 @@ wp_get_attachment_thumb_file()
 wp_get_attachment_thumb_url()
 wp_get_attachment_url()
 wp_get_available_translations
+wp_get_available_translations()
 wp_get_comment_status()
 wp_get_cookie_login()
 wp_get_current_commenter()
@@ -3484,6 +3501,7 @@ wp_get_referer()
 wp_get_revision_ui_diff
 wp_get_schedule()
 wp_get_schedules()
+wp_get_session_token
 wp_get_session_token
 wp_get_sidebars_widgets()
 wp_get_single_post()
@@ -3518,6 +3536,7 @@ wp_insert_user()
 wp_install
 wp_install_defaults()
 wp_install_language_form
+wp_install_language_form()
 wp_install_maybe_enable_pretty_permalinks()
 wp_is_large_network
 wp_is_mobile()
@@ -3529,8 +3548,8 @@ wp_kses_allowed_html
 wp_kses_array_lc()
 wp_kses_attr()
 wp_kses_bad_protocol()
-wp_kses_bad_protocol_once2()
 wp_kses_bad_protocol_once()
+wp_kses_bad_protocol_once2()
 wp_kses_check_attr_val()
 wp_kses_decode_entities()
 wp_kses_hair()
@@ -3538,11 +3557,11 @@ wp_kses_hook()
 wp_kses_html_error()
 wp_kses_js_entities()
 wp_kses_no_null()
-wp_kses_normalize_entities2()
 wp_kses_normalize_entities()
+wp_kses_normalize_entities2()
 wp_kses_post()
-wp_kses_split2()
 wp_kses_split()
+wp_kses_split2()
 wp_kses_stripslashes()
 wp_kses_version()
 wp_link_pages()
@@ -3668,6 +3687,7 @@ wp_signon()
 wp_signup_location
 wp_site_icon()
 wp_spaces_regexp
+wp_spaces_regexp()
 wp_specialchars()
 wp_sprintf
 wp_sprintf_l
@@ -3713,6 +3733,7 @@ wp_upload_tabs
 wp_user_dashboard_setup
 wp_user_dashboard_widgets
 wp_validate_boolean
+wp_validate_boolean()
 wp_verify_nonce()
 wp_video_embed_handler
 wp_video_extensions
@@ -3767,6 +3788,7 @@ wpmueditblogaction
 wptexturize()
 wptexturize_primes()
 wpview_media_sandbox_styles
+wpview_media_sandbox_styles()
 wxr_export_skip_commentmeta
 wxr_export_skip_postmeta
 xmlrpc_allow_anonymous_comments
