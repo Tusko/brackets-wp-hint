@@ -93,6 +93,7 @@ add_site_option()
 add_site_option_{$key}
 add_site_option_{$option}
 add_submenu_page()
+add_term_meta()
 add_tag_form
 add_tag_form_fields
 add_tag_form_pre
@@ -987,6 +988,7 @@ get_term()
 get_term_by()
 get_term_children()
 get_term_link()
+get_term_meta()
 get_terms()
 get_terms_args
 get_terms_fields
@@ -2174,6 +2176,7 @@ update_posts_count()
 update_site_option()
 update_site_option_{$key}
 update_site_option_{$option}
+update_term_meta()
 update_theme_complete_actions
 update_translations_complete_actions
 update_user_meta()
