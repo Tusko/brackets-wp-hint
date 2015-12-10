@@ -2450,7 +2450,6 @@ widget_update_callback
 widgets-php
 widgets_admin_page
 widgets_init
-woocommece_webhook_name()
 woocommerce_add_cart_item()
 woocommerce_add_cart_item_data()
 woocommerce_add_message()
@@ -3321,6 +3320,7 @@ woocommerce_webhook_event()
 woocommerce_webhook_hash_algorithm()
 woocommerce_webhook_hooks()
 woocommerce_webhook_http_args()
+woocommerce_webhook_name()
 woocommerce_webhook_payload()
 woocommerce_webhook_resource()
 woocommerce_webhook_secret()
