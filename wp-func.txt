@@ -923,6 +923,7 @@ get_post_stati()
 get_post_status()
 get_post_statuses()
 get_post_time
+get_post_thumbnail_id( $post_id )
 get_post_type()
 get_post_type_archive_link()
 get_post_type_capabilities()
