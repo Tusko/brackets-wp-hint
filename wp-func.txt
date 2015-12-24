@@ -3584,8 +3584,10 @@ wp_login
 wp_login_errors
 wp_login_failed
 wp_login_form()
+wp_login_url()
 wp_loginout()
 wp_logout()
+wp_logout_url()
 wp_lostpassword_url()
 wp_mail()
 wp_mail_charset
@@ -3645,6 +3647,7 @@ wp_register_script()
 wp_register_sidebar_widget()
 wp_register_style()
 wp_register_widget_control()
+wp_registration_url()
 wp_rel_nofollow()
 wp_remote_fopen()
 wp_remote_get()
