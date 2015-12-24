@@ -864,6 +864,7 @@ get_header()
 get_header_image()
 get_header_textcolor()
 get_home_template()
+get_home_url()
 get_id_from_blogname()
 get_image_tag
 get_image_tag_class
