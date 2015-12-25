@@ -2166,6 +2166,7 @@ update_bulk_plugins_complete_actions
 update_bulk_theme_complete_actions
 update_comment_meta()
 update_feedback
+update_field($field_key, $value, $post_id)
 update_footer
 update_option()
 update_option_new_admin_email()
