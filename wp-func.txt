@@ -5,8 +5,6 @@ $wp_customize->add_setting('name', array($args));
 $wp_customize->get_panel( $id );
 $wp_customize->remove_panel( $id );
 absint()
-acf_add_options_page()
-acf_add_options_sub_page()
 activated_plugin
 activate_blog
 activate_header
@@ -887,7 +885,6 @@ get_edit_term_link()
 get_edit_user_link
 get_enclosed()
 get_extended()
-get_field('field_name', $post->ID)
 get_footer()
 get_gmt_from_date()
 get_header()
@@ -1019,7 +1016,6 @@ get_stylesheet_directory_uri()
 get_stylesheet_uri()
 get_subdirectory_reserved_names()
 get_submit_button()
-get_sub_field('sub_field_name')
 get_super_admins()
 get_tag()
 get_tags()
@@ -1136,7 +1132,6 @@ has_tag()
 has_term()
 have_comments()
 have_posts()
-have_rows('repeater_field_name', $post->ID)
 header_image()
 header_textcolor()
 heartbeat_nopriv_received
@@ -2205,7 +2200,6 @@ the_excerpt_embed()
 the_excerpt_export
 the_excerpt_rss()
 the_feed_link
-the_field('field_name', $post->ID)
 the_generator
 the_header_image_tag()
 the_ID()
@@ -2227,7 +2221,6 @@ the_preview
 the_row()
 the_search_query
 the_shortlink
-the_sub_field('sub_field_name')
 the_tags()
 the_terms()
 the_time()
@@ -2309,7 +2302,6 @@ update_bulk_plugins_complete_actions
 update_bulk_theme_complete_actions
 update_comment_meta()
 update_feedback
-update_field($field_key, $value, $post_id)
 update_footer
 update_network_option()
 update_option()
@@ -4094,3 +4086,25 @@ __()
 {$type}_send_to_editor_url
 {$type}_template
 {$type}_upload_iframe_src
+acf_add_options_page()
+acf_add_options_sub_page()
+acf_form()
+acf_set_options_page_capability()
+acf_set_options_page_menu()
+acf_set_options_page_title()
+get_field_object()
+get_field_objects()
+get_field()
+get_fields()
+the_field()
+get_row_layout()
+get_sub_field_object()
+get_sub_field()
+has_sub_field()
+have_rows()
+the_sub_field()
+add_row()
+delete_row()
+update_field($field_key, $value, $post_id)
+update_row()
+update_sub_field()
