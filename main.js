@@ -9,8 +9,8 @@ define(function (require, exports, module) {
         CodeHintManager     = brackets.getModule("editor/CodeHintManager"),
         LanguageManager     = brackets.getModule("language/LanguageManager");
     
-    var AppInit = brackets.getModule('utils/AppInit'),
-        WPfuncHint = require('text!wp-func.txt');
+    var AppInit 	  = brackets.getModule('utils/AppInit'),
+        WPfuncHint    = require('text!wp-func.txt');
     
     var lastLine,
         lastFileName,
