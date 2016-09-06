@@ -138,6 +138,13 @@ define(function (require, exports, module) {
         var indexOfTheSymbol = textBeforeCursor.search(this.currentTokenDefinition);
         var replaceStart = {line:cursor.line,ch:indexOfTheSymbol};
         this.editor.document.replaceRange(hint, replaceStart, cursor);
+        
+        if(hint.slice(-1) === ")") {
+            cursor = this.editor.getCursorPos();
+            cursor.ch--;
+            this.editor.setCursorPos(cursor);
+        }
+        
         return false;
     };
     
