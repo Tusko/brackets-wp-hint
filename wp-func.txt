@@ -1039,7 +1039,7 @@ get_post_field()
 get_post_format()
 get_post_galleries
 get_post_gallery
-get_post_meta($id, $key, $single)
+get_post_meta( $id, $key, $single )
 get_post_mime_type()
 get_post_modified_time
 get_post_stati()
