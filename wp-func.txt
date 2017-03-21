@@ -1039,7 +1039,7 @@ get_post_field()
 get_post_format()
 get_post_galleries
 get_post_gallery
-get_post_meta($id, $key, $single)
+get_post_meta( $id, $key, $single )
 get_post_mime_type()
 get_post_modified_time
 get_post_stati()
@@ -3989,6 +3989,7 @@ wp_oembed_add_discovery_links()
 wp_oembed_add_host_js()
 wp_oembed_add_provider()
 wp_oembed_ensure_format()
+wp_oembed_get()
 wp_oembed_register_route()
 wp_oembed_remove_provider()
 wp_original_referer_field()
