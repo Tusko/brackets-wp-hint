@@ -46,8 +46,10 @@ _update_posts_count_on_delete
 _update_posts_count_on_transition_post_status
 _user_admin_menu
 _wp_customize_changeset_filter_insert_post_data()
+_wp_delete_customize_changeset_dependent_auto_drafts()
 _wp_get_current_user()
 _wp_handle_upload
+_wp_keep_alive_customize_changeset_dependent_auto_drafts()
 _wp_post_revision_data()
 _wp_post_revision_field_{$field}
 _wp_post_revision_fields
@@ -637,6 +639,7 @@ delete_{$meta_type}_meta
 delete_{$meta_type}_metadata
 delete_{$meta_type}meta
 delete_{$taxonomy}
+deleted_blog
 deleted_comment
 deleted_commentmeta
 deleted_link
@@ -818,6 +821,7 @@ feed_links_show_posts_feed
 fetch_feed()
 fetch_rss()
 file_is_displayable_image
+file_mod_allowed
 file_send_to_editor_url
 filesystem_method
 filesystem_method_file
@@ -1129,6 +1133,7 @@ get_term_by()
 get_term_children()
 get_term_link()
 get_term_meta()
+get_term_parents_list()
 get_terms()
 get_terms_args
 get_terms_defaults
@@ -1578,9 +1583,12 @@ mce_theme
 mce_valid_elements
 media_buttons
 media_buttons_context
+media_library_show_audio_playlist
+media_library_show_video_playlist
 media_meta
 media_row_actions
 media_send_to_editor
+media_sideload_image()
 media_submitbox_misc_sections
 media_upload_default_tab
 media_upload_default_type
@@ -1599,6 +1607,7 @@ merge_filters()
 meta_is_product_attribute()
 meta_query_find_compatible_table_alias
 mime_types
+minimum_site_name_length
 mod_rewrite_rules
 month_link
 months_dropdown_results
@@ -1636,6 +1645,7 @@ nav_menu_item_title
 nav_menu_items_{$post_type_name}
 nav_menu_link_attributes
 nav_menu_meta_box_object
+nav_menu_submenu_css_class
 navigation_markup_template
 network_admin_edit_{$action}
 network_admin_menu
@@ -1704,6 +1714,7 @@ page_attributes_dropdown_pages_args
 page_attributes_meta_box_template
 page_css_class
 page_link
+page_menu_link_attributes
 page_relatedlinks_list
 page_rewrite_rules
 page_row_actions
@@ -1764,6 +1775,7 @@ post_comment_text
 post_comments_feed_link()
 post_comments_feed_link_html
 post_comments_link
+post_date_column_status
 post_date_column_time
 post_edit_category_parent_dropdown_args
 post_edit_form_tag
@@ -1929,6 +1941,7 @@ previous_comments_link_attributes
 previous_posts_link()
 previous_posts_link_attributes
 print_admin_styles
+print_default_editor_scripts
 print_embed_comments_button()
 print_embed_scripts()
 print_embed_sharing_button()
@@ -2059,11 +2072,13 @@ rest_handle_deprecated_function()
 rest_handle_options_request()
 rest_is_boolean()
 rest_is_ip_address()
+rest_oembed_ttl
 rest_output_link_header()
 rest_output_link_wp_head()
 rest_output_rsd()
 rest_parse_date()
 rest_parse_request_arg()
+rest_pre_insert_comment
 rest_request_from_url
 rest_response_link_curies
 rest_sanitize_boolean()
@@ -2215,7 +2230,9 @@ signup_header
 signup_hidden_fields
 signup_nonce_check()
 signup_nonce_fields()
+signup_site_meta
 signup_user_init
+signup_user_meta
 simple_edit_form
 single_cat_title()
 single_month_title( $prefix, $display )
@@ -2741,8 +2758,10 @@ widget_pages_args
 widget_posts_args
 widget_tag_cloud_args
 widget_text
+widget_text_content
 widget_title
 widget_update_callback
+widget_{$this->id_base}_instance
 widgets-php
 widgets_admin_page
 widgets_init
@@ -3647,6 +3666,7 @@ wp_ajax_delete_plugin()
 wp_ajax_delete_theme()
 wp_ajax_destroy_sessions()
 wp_ajax_generate_password()
+wp_ajax_get_community_events()
 wp_ajax_get_post_thumbnail_html()
 wp_ajax_install_plugin()
 wp_ajax_install_theme()
@@ -3725,6 +3745,9 @@ wp_creating_autosave
 wp_cron()
 wp_custom_css_cb()
 wp_customize_support_script()
+wp_dashboard_events_news()
+wp_dashboard_primary()
+wp_dashboard_primary_output()
 wp_dashboard_quota()
 wp_dashboard_setup
 wp_dashboard_widget_links_{$widget_id}
@@ -3758,6 +3781,8 @@ wp_die_app_handler
 wp_die_handler
 wp_die_xmlrpc_handler
 wp_doing_ajax()
+wp_doing_cron
+wp_doing_cron()
 wp_download_language_pack
 wp_download_language_pack()
 wp_dropdown_categories()
@@ -3780,6 +3805,7 @@ wp_embed_handler_youtube
 wp_embed_handler_youtube()
 wp_encode_emoji()
 wp_enqueue_editor
+wp_enqueue_editor()
 wp_enqueue_media
 wp_enqueue_script()
 wp_enqueue_scripts
@@ -3893,6 +3919,7 @@ wp_install_language_form
 wp_install_language_form()
 wp_install_maybe_enable_pretty_permalinks()
 wp_installing()
+wp_is_file_mod_allowed()
 wp_is_ini_value_changeable()
 wp_is_large_network
 wp_is_mobile()
@@ -3937,6 +3964,7 @@ wp_list_pluck()
 wp_list_sort()
 wp_load_alloptions()
 wp_loaded
+wp_localize_community_events()
 wp_localize_jquery_ui_datepicker()
 wp_localize_script()
 wp_login
@@ -3959,6 +3987,8 @@ wp_make_content_images_responsive()
 wp_make_link_relative()
 wp_maybe_auto_update
 wp_maybe_decline_date()
+wp_maybe_update_network_site_counts()
+wp_maybe_update_network_user_counts()
 wp_mce_translation
 wp_media_attach_action()
 wp_mediaelement_fallback
@@ -4009,6 +4039,8 @@ wp_prepare_attachment_for_js()
 wp_prepare_revision_for_js
 wp_prepare_themes_for_js
 wp_print_admin_notice_templates()
+wp_print_community_events_markup()
+wp_print_community_events_templates()
 wp_print_footer_scripts
 wp_print_request_filesystem_credentials_modal()
 wp_print_revision_templates()
@@ -4120,6 +4152,9 @@ wp_update_comment_count_now()
 wp_update_custom_css_post()
 wp_update_nav_menu
 wp_update_nav_menu_item
+wp_update_network_counts()
+wp_update_network_site_counts()
+wp_update_network_user_counts()
 wp_update_post()
 wp_update_term()
 wp_update_term_parent
