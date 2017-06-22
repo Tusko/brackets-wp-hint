@@ -2,7 +2,6 @@ Brackets Wordpress Hint
 ================
 
 [![Downloads](https://badges.ml/brackets-wp-functions-hint/total.svg)](https://brackets-extension-badges.github.io#brackets-wp-functions-hint)
-
 ================
 
 Brackets extension, which helps you in writing Wordpress Themes/Plugins.
