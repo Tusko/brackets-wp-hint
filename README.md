@@ -1,7 +1,11 @@
 Brackets Wordpress Hint
 ================
 
-plugin for Brackets, which will help you in writing Wordpress Themes/Plugins.
+[![Downloads](https://badges.ml/brackets-wp-functions-hint/total.svg)](https://brackets-extension-badges.github.io#brackets-wp-functions-hint)
+
+================
+
+Brackets extension, which helps you in writing Wordpress Themes/Plugins.
 
 ## Plugin include hints for:
 - Wordpress Core functions
