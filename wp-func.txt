@@ -2296,6 +2296,7 @@ template_directory
 template_directory_uri
 template_include
 template_redirect
+term_description()
 term_exists()
 term_id_filter
 term_link
