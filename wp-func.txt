@@ -4,6 +4,15 @@ $wp_customize->add_section('name', array($args));
 $wp_customize->add_setting('name', array($args));
 $wp_customize->get_panel( $id );
 $wp_customize->remove_panel( $id );
+WP_REST_Attachments_Controller::check_upload_size()
+WP_REST_Comment_Meta_Fields::get_meta_subtype()
+WP_REST_Meta_Fields::get_meta_subtype()
+WP_REST_Post_Meta_Fields::get_meta_subtype()
+WP_REST_Posts_Controller::get_available_actions()
+WP_REST_Posts_Controller::get_schema_links()
+WP_REST_Term_Meta_Fields::get_meta_subtype()
+WP_REST_User_Meta_Fields::get_meta_subtype()
+WP_Term_Query::populate_terms()
 Walker
 Walker_Category
 Walker_CategoryDropdown
@@ -45,6 +54,12 @@ _sanitize_text_fields()
 _update_posts_count_on_delete
 _update_posts_count_on_transition_post_status
 _user_admin_menu
+_wc_get_cached_product_terms
+_wc_get_product_terms_name_num_usort_callback
+_wc_get_product_terms_parent_usort_callback
+_wc_save_product_price
+_wc_term_recount
+_woocommerce_term_recount
 _wp_customize_changeset_filter_insert_post_data()
 _wp_delete_customize_changeset_dependent_auto_drafts()
 _wp_get_current_user()
@@ -54,6 +69,8 @@ _wp_post_revision_data()
 _wp_post_revision_field_{$field}
 _wp_post_revision_fields
 _wp_preview_post_thumbnail_filter()
+_wp_privacy_requests_screen_options()
+_wp_privacy_settings_filter_draft_page_titles()
 _wp_put_post_revision
 _wp_register_meta_args_whitelist()
 _wp_relative_upload_path
@@ -92,6 +109,7 @@ add_existing_user_to_blog()
 add_filter()
 add_group()
 add_image_size()
+add_inline_data
 add_link
 add_link_category_form_pre
 add_links_page()
@@ -145,6 +163,7 @@ add_to_cart_url()
 add_user_meta()
 add_user_to_blog()
 add_users_page()
+add_woocommerce_term_meta
 add_woocommerce_term_meta()
 add_{$meta_type}_meta
 add_{$meta_type}_metadata
@@ -307,6 +326,8 @@ auth_post_meta_{$meta_key}
 auth_redirect
 auth_redirect()
 auth_redirect_scheme
+auth_{$object_type}_meta_{$meta_key}_for_{$object_subtype}
+auth_{$object_type}_{$object_subtype}_meta_{$meta_key}unregister_meta_key()
 authenticate
 author_can()
 author_email
@@ -635,6 +656,7 @@ delete_user_form
 delete_user_meta()
 delete_usermeta
 delete_widget
+delete_woocommerce_term_meta
 delete_woocommerce_term_meta()
 delete_{$meta_type}_meta
 delete_{$meta_type}_metadata
@@ -833,6 +855,7 @@ fix_phpmailer_messageid()
 flash_uploader
 flush_rewrite_rules()
 flush_rewrite_rules_hard
+flush_rewrite_rules_on_shop_page_save
 force_balance_tags()
 force_filtered_html_on_import
 force_ssl_content()
@@ -1006,6 +1029,8 @@ get_next_posts_link()
 get_node()
 get_nodes()
 get_num_queries()
+get_object_subtype()
+get_object_subtype_{$object_type}
 get_object_term_cache()
 get_oembed_endpoint_url()
 get_oembed_response_data()
@@ -1070,7 +1095,9 @@ get_previous_post_join
 get_previous_post_sort
 get_previous_post_where
 get_previous_posts_link()
+get_product
 get_product()
+get_product_search_form
 get_product_search_form()
 get_product_type()
 get_profile()
@@ -1207,11 +1234,17 @@ get_usernumposts()
 get_users()
 get_users_drafts
 get_weekstartend()
+get_woocommerce_api_url
 get_woocommerce_api_url()
+get_woocommerce_currencies
 get_woocommerce_currencies()
+get_woocommerce_currency
 get_woocommerce_currency()
+get_woocommerce_currency_symbol
 get_woocommerce_currency_symbol()
+get_woocommerce_price_format
 get_woocommerce_price_format()
+get_woocommerce_term_meta
 get_woocommerce_term_meta()
 get_wp_title_rss
 get_year_link()
@@ -1247,6 +1280,7 @@ has_post_thumbnail()
 has_sub_field()
 has_tag()
 has_term()
+hash_equals
 have_comments()
 have_posts()
 have_rows()
@@ -1356,12 +1390,15 @@ intermediate_image_sizes
 intermediate_image_sizes_advanced
 invite_user
 is_404()
+is_account_page
 is_account_page()
 is_active_sidebar()
 is_active_widget()
+is_add_payment_method_page
 is_add_payment_method_page()
 is_admin()
 is_admin_bar_showing()
+is_ajax
 is_ajax()
 is_archive()
 is_archived()
@@ -1369,9 +1406,12 @@ is_attachment()
 is_author()
 is_blog_installed()
 is_blog_user()
+is_cart
 is_cart()
 is_category()
+is_checkout
 is_checkout()
+is_checkout_pay_page
 is_checkout_pay_page()
 is_child_theme()
 is_customize_preview
@@ -1379,16 +1419,19 @@ is_customize_preview()
 is_date()
 is_day()
 is_dynamic_sidebar()
+is_edit_account_page
 is_email()
 is_email_address_unsafe()
 is_embed()
 is_feed()
+is_filtered
 is_filtered()
 is_front_page()
 is_header_video_active()
 is_home()
 is_local_attachment()
 is_locale_switched()
+is_lost_password_page
 is_main_query()
 is_main_site()
 is_month()
@@ -1396,6 +1439,7 @@ is_multi_author()
 is_multisite()
 is_new_day()
 is_object_in_term()
+is_order_received_page
 is_order_received_page()
 is_page()
 is_page_template()
@@ -1409,9 +1453,13 @@ is_post_type_archive()
 is_post_type_hierarchical()
 is_post_type_viewable()
 is_preview()
+is_product
 is_product()
+is_product_category
 is_product_category()
+is_product_tag
 is_product_tag()
+is_product_taxonomy
 is_product_taxonomy()
 is_protected_meta
 is_registered_sidebar()
@@ -1419,11 +1467,13 @@ is_rtl()
 is_search()
 is_serialized()
 is_serialized_string()
+is_shop
 is_shop()
 is_single()
 is_singular()
 is_ssl()
 is_sticky()
+is_store_notice_showing
 is_store_notice_showing()
 is_subdomain_install()
 is_super_admin()
@@ -1439,8 +1489,11 @@ is_user_logged_in()
 is_user_member_of_blog()
 is_user_option_local()
 is_user_spammy()
+is_view_order_page
+is_wc_endpoint_url
 is_wc_endpoint_url()
 is_wide_widget_in_customizer
+is_woocommerce
 is_woocommerce()
 is_wp_error()
 is_year()
@@ -1608,6 +1661,7 @@ mejs_settings
 menu_order
 menu_page_url()
 merge_filters()
+meta_is_product_attribute
 meta_is_product_attribute()
 meta_query_find_compatible_table_alias
 mime_types
@@ -2008,6 +2062,7 @@ register_nav_menu()
 register_nav_menus()
 register_new_user
 register_post
+register_post_meta()
 register_post_status()
 register_post_type()
 register_post_type_args
@@ -2019,6 +2074,7 @@ register_sidebars()
 register_taxonomy()
 register_taxonomy_args
 register_taxonomy_for_object_type()
+register_term_meta()
 register_theme_directory()
 register_url
 register_widget()
@@ -2139,6 +2195,7 @@ sanitize_file_name_chars
 sanitize_html_class()
 sanitize_key()
 sanitize_meta
+sanitize_meta()
 sanitize_mime_type()
 sanitize_option()
 sanitize_option_{$option}
@@ -2152,6 +2209,7 @@ sanitize_title_with_dashes()
 sanitize_trackback_urls
 sanitize_user()
 sanitize_{$meta_type}_meta_{$meta_key}
+sanitize_{$object_type}_meta_{$meta_key}_for_{$object_subtype}
 save_post
 save_post_{$post->post_type}
 schedule_event
@@ -2305,6 +2363,7 @@ tags_to_edit
 tagsperpage
 taxonomy_exists()
 taxonomy_feed_link
+taxonomy_is_product_attribute
 taxonomy_is_product_attribute()
 taxonomy_labels_{$taxonomy}
 taxonomy_parent_dropdown_args
@@ -2437,6 +2496,8 @@ trash_post_comments
 trashed_comment
 trashed_post
 trashed_post_comments
+try_gutenberg_learn_more_link
+try_gutenberg_panel
 twentyfifteen_attachment_size
 twentyfifteen_author_bio_avatar_size
 twentyfifteen_color_schemes
@@ -2450,10 +2511,12 @@ unload_textdomain
 unmature_blog
 unregister_meta_key()
 unregister_nav_menu()
+unregister_post_meta()
 unregister_post_type()
 unregister_setting()
 unregister_sidebar()
 unregister_taxonomy()
+unregister_term_meta()
 unregister_widget()
 unregistered_post_type
 unregistered_taxonomy
@@ -2512,6 +2575,7 @@ update_welcome_email
 update_welcome_subject
 update_welcome_user_email
 update_welcome_user_subject
+update_woocommerce_term_meta
 update_woocommerce_term_meta()
 update_wpmu_options
 update_{$meta_type}_meta
@@ -2562,6 +2626,7 @@ user_can_richedit
 user_contactmethods
 user_dashboard_url
 user_edit_form_tag
+user_erasure_complete_email_subject
 user_has_cap
 user_jabber_label
 user_new_form
@@ -2571,6 +2636,7 @@ user_profile_picture_description
 user_profile_update_errors
 user_register
 user_registration_email
+user_request_confirmed_email_subject
 user_row_actions
 user_search_columns
 user_trailingslashit
@@ -2595,86 +2661,298 @@ views_{$screen->id}
 views_{$this->screen->id}
 visual_editor
 walker_nav_menu_start_el
+wc_add_notice
 wc_add_notice()
+wc_add_number_precision
+wc_add_number_precision_deep
+wc_add_order_item
 wc_add_order_item()
+wc_add_order_item_meta
 wc_add_order_item_meta()
+wc_add_to_cart_message
 wc_add_to_cart_message()
+wc_add_wp_error_notices
 wc_admin_reports_path()
+wc_api_hash
+wc_array_cartesian
+wc_array_filter_default_attributes
+wc_array_merge_recursive_numeric
+wc_array_overlay
+wc_attribute_label
 wc_attribute_label()
+wc_attribute_orderby
 wc_attribute_orderby()
+wc_attribute_taxonomy_id_by_name
+wc_attribute_taxonomy_name
 wc_attribute_taxonomy_name()
+wc_attribute_taxonomy_name_by_id
+wc_attributes_array_filter_variation
+wc_attributes_array_filter_visible
+wc_back_link
+wc_body_class
 wc_body_class()
+wc_bool_to_string
+wc_cancel_unpaid_orders
 wc_cancel_unpaid_orders()
+wc_cart_round_discount
+wc_cart_totals_coupon_html
 wc_cart_totals_coupon_html()
+wc_cart_totals_coupon_label
 wc_cart_totals_coupon_label()
+wc_cart_totals_fee_html
 wc_cart_totals_fee_html()
+wc_cart_totals_order_total_html
 wc_cart_totals_order_total_html()
+wc_cart_totals_shipping_html
 wc_cart_totals_shipping_html()
+wc_cart_totals_shipping_method_label
 wc_cart_totals_shipping_method_label()
+wc_cart_totals_subtotal_html
 wc_cart_totals_subtotal_html()
+wc_cart_totals_taxes_total_html
 wc_cart_totals_taxes_total_html()
+wc_caught_exception
+wc_change_term_counts
 wc_change_term_counts()
+wc_check_if_attribute_name_is_reserved
+wc_checkout_is_https
+wc_clean
 wc_clean()
+wc_cleanup_session_data
+wc_clear_cart_after_payment
 wc_clear_cart_after_payment()
+wc_clear_notices
 wc_clear_notices()
+wc_clear_term_product_ids
+wc_create_attribute
+wc_create_new_customer
 wc_create_new_customer()
+wc_create_order
 wc_create_order()
+wc_create_order_note
+wc_create_refund
 wc_create_refund()
+wc_customer_bought_product
 wc_customer_bought_product()
+wc_customer_edit_account_url
 wc_customer_edit_account_url()
+wc_customer_has_capability
 wc_customer_has_capability()
+wc_date_format
 wc_date_format()
+wc_decimal_to_fraction
+wc_deferred_product_sync
+wc_delete_attribute
+wc_delete_expired_transients
+wc_delete_order_item
 wc_delete_order_item()
+wc_delete_order_item_meta
 wc_delete_order_item_meta()
+wc_delete_order_note
+wc_delete_product_transients
 wc_delete_product_transients()
+wc_delete_shop_order_transients
 wc_delete_shop_order_transients()
+wc_deliver_webhook_async
 wc_deliver_webhook_async()
+wc_deprecated_argument
+wc_deprecated_function
+wc_deprecated_hook
+wc_disable_admin_bar
 wc_disable_admin_bar()
+wc_disable_author_archives_for_customers
+wc_display_item_downloads
+wc_display_item_meta
+wc_display_product_attributes
+wc_do_deprecated_action
+wc_do_oembeds
+wc_doing_it_wrong
+wc_downloadable_file_permission
 wc_downloadable_file_permission()
+wc_downloadable_product_permissions
 wc_downloadable_product_permissions()
+wc_dropdown_variation_attribute_options
+wc_edit_address_i18n
 wc_edit_address_i18n()
+wc_empty_cart
 wc_empty_cart()
+wc_empty_cart_message
+wc_enable_wc_plugin_headers
+wc_enqueue_js
 wc_enqueue_js()
+wc_fix_product_attachment_link
 wc_fix_product_attachment_link()
+wc_fix_rewrite_rules
 wc_fix_rewrite_rules()
 wc_fix_rewrite_rules_init()
+wc_flatten_meta_callback
+wc_float_to_string
 wc_float_to_string()
+wc_format_content
+wc_format_country_state_string
+wc_format_coupon_code
+wc_format_datetime
+wc_format_decimal
 wc_format_decimal()
+wc_format_dimensions
+wc_format_hex
 wc_format_hex()
+wc_format_list_of_items
+wc_format_localized_decimal
 wc_format_localized_decimal()
+wc_format_localized_price
 wc_format_localized_price()
+wc_format_option_hold_stock_minutes
+wc_format_option_price_num_decimals
+wc_format_option_price_separators
+wc_format_phone_number
 wc_format_phone_number()
+wc_format_postcode
 wc_format_postcode()
+wc_format_price_range
+wc_format_product_short_description
+wc_format_refund_total
 wc_format_refund_total()
+wc_format_sale_price
+wc_format_stock_for_display
+wc_format_stock_quantity_for_display
+wc_format_weight
+wc_gallery_noscript
+wc_generator_tag
 wc_generator_tag()
+wc_get_account_downloads_columns
+wc_get_account_endpoint_url
+wc_get_account_formatted_address
+wc_get_account_menu_item_classes
+wc_get_account_menu_items
+wc_get_account_orders_actions
+wc_get_account_orders_columns
+wc_get_account_payment_methods_columns
+wc_get_account_payment_methods_types
+wc_get_account_saved_payment_methods_list
+wc_get_account_saved_payment_methods_list_item_cc
+wc_get_account_saved_payment_methods_list_item_echeck
+wc_get_attachment_image_attributes
 wc_get_attachment_image_attributes()
+wc_get_attribute
+wc_get_attribute_taxonomies
 wc_get_attribute_taxonomies()
+wc_get_attribute_taxonomy_names
 wc_get_attribute_taxonomy_names()
+wc_get_attribute_type_label
+wc_get_attribute_types
+wc_get_base_location
+wc_get_cart_remove_url
+wc_get_cart_undo_url
+wc_get_cart_url
+wc_get_checkout_url
+wc_get_chosen_shipping_method_for_package
+wc_get_chosen_shipping_method_ids
+wc_get_core_supported_themes
 wc_get_core_supported_themes()
 wc_get_coupon_type()
 wc_get_coupon_types()
+wc_get_credit_card_type_label
+wc_get_customer_available_downloads
 wc_get_customer_available_downloads()
+wc_get_customer_avatar_url
+wc_get_customer_default_location
+wc_get_customer_download_permissions
+wc_get_customer_last_order
+wc_get_customer_order_count
+wc_get_customer_saved_methods_list
+wc_get_customer_total_spent
+wc_get_default_product_rows_per_page
+wc_get_default_products_per_row
+wc_get_default_shipping_method_for_package
+wc_get_dimension
 wc_get_dimension()
+wc_get_email_order_items
+wc_get_endpoint_url
 wc_get_endpoint_url()
+wc_get_featured_product_ids
 wc_get_featured_product_ids()
+wc_get_filename_from_url
 wc_get_filename_from_url()
+wc_get_formatted_cart_item_data
+wc_get_formatted_variation
 wc_get_formatted_variation()
+wc_get_image_size
 wc_get_image_size()
+wc_get_is_paid_statuses
+wc_get_log_file_name
+wc_get_log_file_path
 wc_get_log_file_path()
+wc_get_logger
+wc_get_loop_class
+wc_get_loop_prop
+wc_get_min_max_price_meta_query
+wc_get_notices
 wc_get_notices()
+wc_get_object_terms
+wc_get_order
 wc_get_order()
+wc_get_order_id_by_order_item_id
+wc_get_order_id_by_order_key
 wc_get_order_id_by_order_key()
+wc_get_order_item_meta
 wc_get_order_item_meta()
+wc_get_order_note
+wc_get_order_notes
+wc_get_order_status_name
 wc_get_order_status_name()
+wc_get_order_statuses
 wc_get_order_statuses()
+wc_get_order_type
 wc_get_order_type()
+wc_get_order_types
 wc_get_order_types()
+wc_get_orders
+wc_get_page_children
+wc_get_page_id
 wc_get_page_id()
+wc_get_page_permalink
+wc_get_payment_gateway_by_order
 wc_get_payment_gateway_by_order()
-wc_get_products()
+wc_get_permalink_structure
+wc_get_post_data_by_key
+wc_get_price_decimal_separator
+wc_get_price_decimals
+wc_get_price_excluding_tax
+wc_get_price_html_from_text
+wc_get_price_including_tax
+wc_get_price_thousand_separator
+wc_get_price_to_display
+wc_get_product
+wc_get_product_attachment_props
+wc_get_product_backorder_options
+wc_get_product_cat_class
+wc_get_product_cat_ids
+wc_get_product_category_list
+wc_get_product_id_by_sku
+wc_get_product_ids_on_sale
 wc_get_product_ids_on_sale()
+wc_get_product_stock_status_options
+wc_get_product_tag_list
+wc_get_product_tax_class_options
+wc_get_product_term_ids
+wc_get_product_terms
 wc_get_product_terms()
+wc_get_product_types
 wc_get_product_types()
+wc_get_product_variation_attributes
+wc_get_product_visibility_options
+wc_get_product_visibility_term_ids
+wc_get_products
+wc_get_products()
+wc_get_rating_html
+wc_get_raw_referer
+wc_get_related_products
+wc_get_relative_url
+wc_get_rounding_precision
+wc_get_shipping_method_count
+wc_get_shipping_zone
+wc_get_star_rating_html
 wc_get_tax_class_by_tax_id()
 wc_get_template()
 wc_get_template_part()
@@ -3687,6 +3965,7 @@ wp_ajax_set_attachment_thumbnail
 wp_ajax_set_attachment_thumbnail()
 wp_ajax_update_plugin()
 wp_ajax_update_theme()
+wp_ajax_update_try_gutenberg_panel()
 wp_ajax_{$action}
 wp_allow_comment()
 wp_allowed_protocols()
@@ -4142,6 +4421,7 @@ wp_title_rss
 wp_trash_post()
 wp_trim_excerpt()
 wp_trim_words()
+wp_try_gutenberg_panel()
 wp_unique_filename
 wp_unique_post_slug
 wp_unique_post_slug_is_bad_attachment_slug
@@ -4312,3 +4592,51 @@ zeroise()
 {$type}_template
 {$type}_upload_iframe_src
 {taxonomy}_term_edit_form_top
+global $post;
+global $authordata;
+global $currentday;
+global $currentmonth;
+global $page;
+global $pages;
+global $multipage;
+global $more;
+global $numpages;
+global $is_iphone;
+global $is_chrome;
+global $is_safari;
+global $is_NS4;
+global $is_opera;
+global $is_macIE;
+global $is_winIE;
+global $is_gecko;
+global $is_lynx;
+global $is_IE;
+global $is_edge;
+global $is_apache;
+global $is_IIS;
+global $is_iis7;
+global $is_nginx;
+global $wp_version;
+global $wp_db_version;
+global $tinymce_version;
+global $manifest_version;
+global $required_php_version;
+global $required_mysql_version;
+global $super_admins;
+global $wp_query;
+global $wp_rewrite;
+global $wp;
+global $wpdb;
+global $wp_locale;
+global $wp_admin_bar;
+global $wp_roles;
+global $wp_meta_boxes;
+global $wp_registered_sidebars;
+global $wp_registered_widgets;
+global $wp_registered_widget_controls;
+global $wp_registered_widget_updates;
+global $pagenow;
+global $post_type;
+global $allowedposttags;
+global $allowedtags;
+global $menu;

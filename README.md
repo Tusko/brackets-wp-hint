@@ -13,9 +13,12 @@ Brackets extension, which helps you in writing WordPress Themes/Plugins.
 
 ## License
 
-Copyright (c) 2016, [Tusko Trush](https://frontend.im/?github "Tusko Trush")
+Copyright (c) 2018, [Tusko Trush](https://frontend.im/?github "Tusko Trush")
 
 > See LICENSE for more info.
+
+## Donate
+[Support plugin](https://send.monobank.com.ua/QMnpw2tn "Support plugin")
 
 ---------------
 If you have any questions on this please post an issue/question: https://github.com/Tusko/brackets-wp-hint/issues
