@@ -979,6 +979,7 @@ get_edit_comment_link
 get_edit_post_link()
 get_edit_tag_link
 get_edit_term_link()
+get_edit_profile_url()
 get_edit_user_link
 get_editable_authors
 get_editor_stylesheets
