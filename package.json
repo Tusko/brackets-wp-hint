@@ -1,20 +1,31 @@
 {
-    "name": "brackets-wp-functions-hint",
-    "title": "Brackets Wordpress Hint",
-    "description": "Brackets Wordpress Hint - plugin for Brackets, which will help you in writing Wordpress Themes/Plugins (WooCommerce, ACF included)",
-    "homepage": "https://github.com/Tusko/brackets-wp-hint/",
-    "version": "3.2.4",
-    "author": "Tusko Trush <tusko@photoinside.me> (https://frontend.im/)",
-    "license": "MIT",
-    "keywords": [
-        "development",
-        "wordpress",
-        "woocommerce",
-        "theme",
-        "php",
-        "hint"
-    ],
-    "engines": {
-        "brackets": ">=0.41.0"
-    }
+  "name": "brackets-wp-functions-hint",
+  "title": "Brackets Wordpress Hint",
+  "description": "Brackets Wordpress Hint - plugin for Brackets, which will help you in writing Wordpress Themes/Plugins (WooCommerce, ACF included)",
+  "homepage": "https://github.com/Tusko/brackets-wp-hint/",
+  "version": "4.0.0",
+  "author": "Tusko Trush <tusko@photoinside.me> (https://frontend.im/)",
+  "license": "MIT",
+  "keywords": [
+    "developmentelopment",
+    "wordpress",
+    "woocommerce",
+    "theme",
+    "php",
+    "hint"
+  ],
+  "engines": {
+    "brackets": ">=0.41.0"
+  },
+  "dependencies": {
+    "html-to-json": "^0.6.0",
+    "lodash": "^4.17.11",
+    "merge-files": "^0.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm run sync; npm run merge",
+    "sync": "node ./sync/wp-core.js; node ./sync/acf.js; node ./sync/woocommerce.js",
+    "merge": "node ./merge.js"
+  }
 }
