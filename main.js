@@ -1,21 +1,20 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50, regexp: true */
 /*global define, brackets, $, window */
 
-define(function (require, exports, module) {
+define(function(require, exports, module) {
+  "use strict";
 
-    "use strict";
-
-  var AppInit             = brackets.getModule("utils/AppInit"),
-      CodeHintManager     = brackets.getModule("editor/CodeHintManager"),
-      LanguageManager     = brackets.getModule("language/LanguageManager"),
-      WPfuncHint          = require("text!result.txt");
+  var AppInit = brackets.getModule("utils/AppInit"),
+    CodeHintManager = brackets.getModule("editor/CodeHintManager"),
+    LanguageManager = brackets.getModule("language/LanguageManager"),
+    WPfuncHint = require("text!./result.txt");
 
   var lastLine,
-      lastFileName,
-      cachedMatches,
-      cachedWordList,
-      tokenDefinition,
-      currentTokenDefinition;
+    lastFileName,
+    cachedMatches,
+    cachedWordList,
+    tokenDefinition,
+    currentTokenDefinition;
 
   /**
    * @constructor
@@ -44,36 +43,37 @@ define(function (require, exports, module) {
    * the given editor context and, in case implicitChar is non- null,
    * whether it is appropriate to do so.
    */
-  WPhints.prototype.hasHints = function (editor, implicitChar) {
+  WPhints.prototype.hasHints = function(editor, implicitChar) {
     this.editor = editor;
     var cursor = this.editor.getCursorPos();
 
     // if it is not the same line as the last input - rebuild word list
-    if(cursor.line != this.lastLine){
-        var rawWordList = WPfuncHint.match(this.tokenDefinition);
-        this.cachedWordList = [];
-        for(var i in rawWordList){
-           var word = rawWordList[i];
-           if(this.cachedWordList.indexOf(word)==-1){
-               this.cachedWordList.push(word);
-           }
+    if (cursor.line != this.lastLine) {
+      var rawWordList = WPfuncHint.match(this.tokenDefinition);
+      this.cachedWordList = [];
+      for (var i in rawWordList) {
+        var word = rawWordList[i];
+        if (this.cachedWordList.indexOf(word) == -1) {
+          this.cachedWordList.push(word);
         }
+      }
     }
     this.lastLine = cursor.line;
 
     // if has entered more than 2 characters - start completion
-    var lineBeginning = {line:cursor.line,ch:0};
+    var lineBeginning = { line: cursor.line, ch: 0 };
     var textBeforeCursor = this.editor.document.getRange(lineBeginning, cursor);
-    var symbolBeforeCursorArray = textBeforeCursor.match(this.currentTokenDefinition);
-    if(symbolBeforeCursorArray){
+    var symbolBeforeCursorArray = textBeforeCursor.match(
+      this.currentTokenDefinition
+    );
+    if (symbolBeforeCursorArray) {
       // find if the half-word inputed is in the list
-      for(var i in this.cachedWordList){
-        if(this.cachedWordList[i].indexOf(symbolBeforeCursorArray[0])==0){
+      for (var i in this.cachedWordList) {
+        if (this.cachedWordList[i].indexOf(symbolBeforeCursorArray[0]) == 0) {
           return true;
         }
       }
     }
-
 
     return false;
   };
@@ -99,14 +99,19 @@ define(function (require, exports, module) {
    * 4. handleWideResults, a boolean (or undefined) that indicates whether
    *    to allow result string to stretch width of display.
    */
-  WPhints.prototype.getHints = function (implicitChar) {
+  WPhints.prototype.getHints = function(implicitChar) {
     var cursor = this.editor.getCursorPos();
-    var lineBeginning = {line:cursor.line,ch:0};
+    var lineBeginning = { line: cursor.line, ch: 0 };
     var textBeforeCursor = this.editor.document.getRange(lineBeginning, cursor);
-    var symbolBeforeCursorArray = textBeforeCursor.match(this.currentTokenDefinition);
+    var symbolBeforeCursorArray = textBeforeCursor.match(
+      this.currentTokenDefinition
+    );
     var hintList = [];
-    for(var i in this.cachedWordList){
-      if(typeof this.cachedWordList[i] === 'string' && this.cachedWordList[i].indexOf(symbolBeforeCursorArray[0])==0){
+    for (var i in this.cachedWordList) {
+      if (
+        typeof this.cachedWordList[i] === "string" &&
+        this.cachedWordList[i].indexOf(symbolBeforeCursorArray[0]) == 0
+      ) {
         hintList.push(this.cachedWordList[i]);
       }
     }
@@ -129,26 +134,42 @@ define(function (require, exports, module) {
    * Indicates whether the manager should follow hint insertion with an
    * additional explicit hint request.
    */
-  WPhints.prototype.insertHint = function (hint) {
+  WPhints.prototype.insertHint = function(hint) {
     var cursor = this.editor.getCursorPos();
-    var lineBeginning = {line:cursor.line,ch:0};
+    var lineBeginning = { line: cursor.line, ch: 0 };
     var textBeforeCursor = this.editor.document.getRange(lineBeginning, cursor);
     var indexOfTheSymbol = textBeforeCursor.search(this.currentTokenDefinition);
-    var replaceStart = {line:cursor.line,ch:indexOfTheSymbol};
+    var replaceStart = { line: cursor.line, ch: indexOfTheSymbol };
     this.editor.document.replaceRange(hint, replaceStart, cursor);
 
-    if(hint.slice(-1) === ")") {
+    if (hint.slice(-1) === ")") {
       cursor = this.editor.getCursorPos();
       cursor.ch--;
       this.editor.setCursorPos(cursor);
     }
 
+    console.log(
+      "hint: " +
+        hint +
+        " | lineBeginning: " +
+        lineBeginning.line +
+        ", " +
+        lineBeginning.ch +
+        " | textBeforeCursor: " +
+        textBeforeCursor +
+        " | indexOfTheSymbol: " +
+        indexOfTheSymbol +
+        " | replaceStart: " +
+        replaceStart.line +
+        ", " +
+        replaceStart.ch
+    );
+
     return false;
   };
 
-  var wpHints = new WPhints();
-
-  AppInit.appReady(function () {
+  AppInit.appReady(function() {
+    var wpHints = new WPhints();
     CodeHintManager.registerHintProvider(wpHints, ["php"], 10);
   });
 });

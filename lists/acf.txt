@@ -1,7 +1,7 @@
 get_field()
 get_field_object()
-the_field()
 get_fields()
+the_field()
 get_field_objects()
 have_rows()
 get_sub_field()

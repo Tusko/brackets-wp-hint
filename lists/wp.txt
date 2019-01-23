@@ -5104,7 +5104,7 @@ _wp_post_revision_fields
 _wp_post_revision_field_{$field}
 _wp_put_post_revision
 _wp_relative_upload_path
-$action
+{$action}
 {$action}_prefilter
 {$adjacent}_image_link
 {$adjacent}_post_link
