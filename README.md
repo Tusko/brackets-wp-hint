@@ -25,7 +25,7 @@ In window Menu:
 
 ## License
 
-Copyright (c) 2018, [Tusko Trush](https://frontend.im/?github "Tusko Trush")
+Copyright (c) 2019, [Arsmoon](https://arsmoon.com/?utm_source=github&utm_medium=article&utm_campaign=brackets-wp-hints&utm_content=readme "Arsmoon")
 
 > See LICENSE for more info.
 
