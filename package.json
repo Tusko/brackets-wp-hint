@@ -29,7 +29,7 @@
     "html-to-json": "^0.6.0",
     "lodash": "^4.17.11",
     "merge-files": "^0.1.1",
-    "npm": "^6.10.0"
+    "npm": "^6.13.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
