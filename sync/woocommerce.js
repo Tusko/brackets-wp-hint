@@ -5,6 +5,7 @@ const writeStream = fs.createWriteStream(
 );
 const pathName = writeStream.path.replace("../", "");
 const htmlToJson = require("html-to-json");
+const terminal = require("../terminal");
 
 const base2fetch = [
   "https://docs.woocommerce.com/wc-apidocs/hook-docs.html",
@@ -70,11 +71,18 @@ const pageParser = url => {
 
 for (fetchUrl of base2fetch) {
   let l = fetchUrl.split("/");
-  console.log("Creating Promises for " + l[l.length - 1].replace(".html", ""));
+
+  terminal.log(
+    "⏱️ ",
+    "Creating Promises for " + l[l.length - 1].replace(".html", "")
+  );
+
   promises.push(pageParser(fetchUrl));
 }
 
-console.log("Loading " + promises.length + " pages");
+terminal.log("🖨️ ", "Loading " + promises.length + " pages");
+terminal.spinner.start();
+
 const timerStart = Date.now();
 
 Promise.all(promises).then(values => {
@@ -83,14 +91,22 @@ Promise.all(promises).then(values => {
     writeStream.write(functions[f].func + "\n");
   }
 
-  console.log("Loaded in " + (Date.now() - timerStart) / 1000 + " seconds");
+  terminal.spinner.stop();
+  terminal.log(
+    "🧨 ",
+    "Loaded in " + (Date.now() - timerStart) / 1000 + " seconds"
+  );
 
   writeStream.on("finish", () => {
-    console.log(`WooCommerce Sync complete. Saved to ${pathName}`);
+    terminal.log("🏁 ", `WooCommerce Sync complete.`);
+    terminal.log("💾 ", `Saved to ${pathName}`);
   });
 
   writeStream.on("error", err => {
-    console.error(`There is an error writing the file ${pathName} => ${err}`);
+    terminal.log(
+      "🐞 ",
+      `There is an error writing the file ${pathName} => ${err}`
+    );
   });
 
   writeStream.end();

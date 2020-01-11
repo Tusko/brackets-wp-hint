@@ -4,6 +4,7 @@ const path = require("path");
 const writeStream = fs.createWriteStream(__dirname + "/../lists/acf.txt");
 const htmlToJson = require("html-to-json");
 const pathName = writeStream.path.replace("../", "");
+const terminal = require("../terminal");
 
 const funcParser = htmlToJson.createParser([
   ".section#functions table tbody tr",
@@ -21,7 +22,9 @@ const funcParser = htmlToJson.createParser([
   }
 ]);
 
-console.log("Started to load ACF functions");
+terminal.log("🖨️ ", "Started to load ACF functions");
+terminal.spinner.start();
+
 const timerStart = Date.now();
 
 funcParser
@@ -31,14 +34,22 @@ funcParser
       writeStream.write(links[f].func + "\n");
     }
 
-    console.log("Loaded in " + (Date.now() - timerStart) / 1000 + " seconds");
+    terminal.spinner.stop();
+    terminal.log(
+      "🧨 ",
+      "Loaded in " + (Date.now() - timerStart) / 1000 + " seconds"
+    );
 
     writeStream.on("finish", () => {
-      console.log(`ACF Sync complete. Saved to ${pathName}`);
+      terminal.log("🏁 ", `ACF Sync complete.`);
+      terminal.log("💾 ", `Saved to ${pathName}`);
     });
 
     writeStream.on("error", err => {
-      console.error(`There is an error writing the file ${pathName} => ${err}`);
+      terminal.log(
+        "🐞 ",
+        `There is an error writing the file ${pathName} => ${err}`
+      );
     });
 
     writeStream.end();

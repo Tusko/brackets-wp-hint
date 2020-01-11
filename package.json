@@ -3,7 +3,7 @@
   "title": "Brackets Wordpress Hint",
   "description": "Brackets Wordpress Hint - plugin for Brackets, which will help you in writing Wordpress Themes/Plugins (WooCommerce, ACF included)",
   "homepage": "https://github.com/Tusko/brackets-wp-hint/",
-  "version": "4.0.2",
+  "version": "4.0.1",
   "author": "Arsmoon <tusko@arsmoon.com> (https://arsmoon.com/?utm_source=github&utm_medium=article&utm_campaign=brackets-wp-hints&utm_content=readme)",
   "license": "MIT",
   "keywords": [
@@ -26,6 +26,7 @@
     "brackets": ">=0.41.0"
   },
   "dependencies": {
+    "cli-spinner": "^0.2.10",
     "html-to-json": "^0.6.0",
     "lodash": "^4.17.11",
     "merge-files": "^0.1.1",

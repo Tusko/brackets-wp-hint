@@ -6,7 +6,6 @@ define(function(require, exports, module) {
 
   var AppInit = brackets.getModule("utils/AppInit"),
     CodeHintManager = brackets.getModule("editor/CodeHintManager"),
-    LanguageManager = brackets.getModule("language/LanguageManager"),
     WPfuncHint = require("text!./result.txt");
 
   var lastLine,
@@ -51,13 +50,14 @@ define(function(require, exports, module) {
     if (cursor.line != this.lastLine) {
       var rawWordList = WPfuncHint.match(this.tokenDefinition);
       this.cachedWordList = [];
-      for (var i in rawWordList) {
-        var word = rawWordList[i];
+
+      rawWordList.forEach(word => {
         if (this.cachedWordList.indexOf(word) == -1) {
           this.cachedWordList.push(word);
         }
-      }
+      });
     }
+
     this.lastLine = cursor.line;
 
     // if has entered more than 2 characters - start completion
@@ -106,15 +106,11 @@ define(function(require, exports, module) {
     var symbolBeforeCursorArray = textBeforeCursor.match(
       this.currentTokenDefinition
     );
-    var hintList = [];
-    for (var i in this.cachedWordList) {
-      if (
-        typeof this.cachedWordList[i] === "string" &&
-        this.cachedWordList[i].indexOf(symbolBeforeCursorArray[0]) == 0
-      ) {
-        hintList.push(this.cachedWordList[i]);
-      }
-    }
+    var hintList = this.cachedWordList.filter(
+      word =>
+        typeof word === "string" &&
+        word.indexOf(symbolBeforeCursorArray[0]) == 0
+    );
 
     return {
       hints: hintList,

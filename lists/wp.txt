@@ -3,6 +3,7 @@ activate_plugin()
 activate_plugins()
 activate_sitewide_plugin()
 addslashes_gpc()
+addslashes_strings_only()
 add_action()
 add_blog_option()
 add_clean_index()
@@ -103,7 +104,6 @@ bloginfo()
 bloginfo_rss()
 body_class()
 bool_from_yn()
-build_dropdown_script_block_core_categories()
 build_query()
 bulk_edit_posts()
 cache_javascript_headers()
@@ -201,6 +201,7 @@ create_initial_rest_routes()
 create_initial_taxonomies()
 create_user()
 current_action()
+current_datetime()
 current_filter()
 current_theme_info()
 current_theme_supports()
@@ -312,7 +313,9 @@ edit_term_link()
 edit_user()
 email_exists()
 endElement()
+enqueue_block_styles_assets()
 enqueue_comment_hotkeys_js()
+enqueue_editor_block_styles_assets()
 enqueue_embed_scripts()
 ent2ncr()
 esc_attr()
@@ -655,6 +658,7 @@ get_post_comments_feed_link()
 get_post_custom()
 get_post_custom_keys()
 get_post_custom_values()
+get_post_datetime()
 get_post_embed_html()
 get_post_embed_url()
 get_post_field()
@@ -674,6 +678,7 @@ get_post_mime_types()
 get_post_modified_time()
 get_post_permalink()
 get_post_reply_link()
+get_post_states()
 get_post_stati()
 get_post_status()
 get_post_statuses()
@@ -681,6 +686,7 @@ get_post_status_object()
 get_post_taxonomies()
 get_post_thumbnail_id()
 get_post_time()
+get_post_timestamp()
 get_post_to_edit()
 get_post_type()
 get_post_types()
@@ -726,6 +732,7 @@ get_search_form()
 get_search_link()
 get_search_query()
 get_search_template()
+get_self_link()
 get_settings()
 get_settings_errors()
 get_shortcode_atts_regex()
@@ -890,8 +897,6 @@ got_mod_rewrite()
 got_url_rewrite()
 graceful_fail()
 grant_super_admin()
-gutenberg_draft_or_post_title()
-gutenberg_render_block_core_latest_comments()
 gzip_compression()
 hash_equals()
 hash_hmac()
@@ -1328,14 +1333,7 @@ registered_meta_key_exists()
 register_activation_hook()
 register_admin_color_schemes()
 register_and_do_post_meta_boxes()
-register_block_core_archives()
-register_block_core_calendar()
-register_block_core_categories()
-register_block_core_latest_posts()
-register_block_core_rss()
-register_block_core_search()
-register_block_core_shortcode()
-register_block_core_tag_cloud()
+register_block_style()
 register_block_type()
 register_column_headers()
 register_deactivation_hook()
@@ -1389,16 +1387,6 @@ remove_theme_mods()
 remove_theme_support()
 remove_user_from_blog()
 render_block()
-render_block_core_archives()
-render_block_core_block()
-render_block_core_calendar()
-render_block_core_categories()
-render_block_core_latest_comments()
-render_block_core_latest_posts()
-render_block_core_rss()
-render_block_core_search()
-render_block_core_shortcode()
-render_block_core_tag_cloud()
 request_filesystem_credentials()
 require_if_theme_supports()
 require_wp_db()
@@ -1427,6 +1415,7 @@ rest_handle_deprecated_argument()
 rest_handle_deprecated_function()
 rest_handle_options_request()
 rest_is_boolean()
+rest_is_field_included()
 rest_is_ip_address()
 rest_output_link_header()
 rest_output_link_wp_head()
@@ -1468,9 +1457,17 @@ sanitize_meta()
 sanitize_mime_type()
 sanitize_option()
 sanitize_post()
-$per_page
-‘handle_bulk_actions-‘ . get_current_screen()->id
-‘handle_network_bulk_actions-‘ . get_current_screen()->id
+sanitize_post_field()
+sanitize_sql_orderby()
+sanitize_term()
+sanitize_term_field()
+sanitize_textarea_field()
+sanitize_text_field()
+sanitize_title()
+sanitize_title_for_query()
+sanitize_title_with_dashes()
+sanitize_trackback_urls()
+sanitize_url()
 activated_plugin
 activate_blog
 activate_header
@@ -1516,6 +1513,9 @@ admin_bar_menu
 admin_body_class
 admin_color_scheme_picker
 admin_comment_types_dropdown
+admin_email_check_interval
+admin_email_confirm
+admin_email_confirm_form
 admin_enqueue_scripts
 admin_footer
 admin_footer-{$GLOBALS[‘hook_suffix’]}
@@ -1642,6 +1642,7 @@ before_signup_form
 before_signup_header
 before_wp_tiny_mce
 begin_fetch_post_thumbnail_html
+big_image_size_threshold
 block_categories
 block_editor_meta_box_hidden_fields
 block_editor_no_javascript_message
@@ -1700,6 +1701,7 @@ comments_number
 comments_open
 comments_per_page
 comments_popup_link_attributes
+comments_pre_query
 comments_rewrite_rules
 comments_template
 comments_template_query_args
@@ -1933,6 +1935,7 @@ disable_formats_dropdown
 disable_months_dropdown
 display_media_states
 display_post_states
+display_site_states
 documentation_ignore_functions
 document_title_parts
 document_title_separator
@@ -2273,6 +2276,7 @@ incompatible_sql_modes
 index_rel_link
 init
 insert_user_meta
+insert_with_markers_inline_instructions
 install_plugins_nonmenu_tabs
 install_plugins_pre_{$tab}
 install_plugins_table_api_args_{$tab}
@@ -2302,6 +2306,7 @@ is_header_video_active
 is_multi_author
 is_protected_endpoint
 is_protected_meta
+is_sticky
 is_wide_widget_in_customizer
 jpeg_quality
 js_escape
@@ -2362,6 +2367,7 @@ login_title
 login_url
 logout_redirect
 logout_url
+log_query_custom_data
 loop_end
 loop_no_results
 loop_start
@@ -2370,6 +2376,7 @@ lostpassword_post
 lostpassword_redirect
 lostpassword_url
 lost_password
+make_clickable_rel
 make_delete_blog
 make_ham_blog
 make_ham_user
@@ -2389,6 +2396,7 @@ manage_posts_custom_column
 manage_posts_extra_tablenav
 manage_sites_action_links
 manage_sites_custom_column
+manage_sites_extra_tablenav
 manage_taxonomies_for_attachment_columns
 manage_taxonomies_for_{$post_type}_columns
 manage_themes_custom_column
@@ -2796,6 +2804,7 @@ random_password
 rdf_header
 rdf_item
 rdf_ns
+recovery_email_debug_info
 recovery_email_support_info
 recovery_mode_begin_url
 recovery_mode_cookie_length
@@ -2819,6 +2828,7 @@ register_post
 register_post_type_args
 register_setting_args
 register_sidebar
+register_sidebar_defaults
 register_taxonomy_args
 register_url
 registration_errors
@@ -2837,6 +2847,7 @@ respond_link
 restore_previous_locale
 restrict_manage_comments
 restrict_manage_posts
+restrict_manage_sites
 restrict_manage_users
 rest_after_insert_attachment
 rest_after_insert_comment
@@ -2927,17 +2938,6 @@ role_has_cap
 root_rewrite_rules
 rss2_comments_ns
 rss2_head
-rss2_item
-rss2_ns
-rss_enclosure
-rss_head
-rss_item
-rss_tag_pre
-rss_update_frequency
-rss_update_period
-run_wptexturize
-safe_style_css
-salt
 AtomEntry
 AtomFeed
 AtomParser
@@ -3054,6 +3054,7 @@ WP_Ajax_Response
 WP_Ajax_Upgrader_Skin
 wp_atom_server
 WP_Automatic_Updater
+WP_Block_Styles_Registry
 WP_Block_Type
 WP_Block_Type_Registry
 WP_Comment
@@ -3156,7 +3157,9 @@ WP_Posts_List_Table
 WP_Post_Comments_List_Table
 WP_Post_Type
 WP_Press_This
+WP_Privacy_Data_Export_Requests_List_Table
 WP_Privacy_Data_Export_Requests_Table
+WP_Privacy_Data_Removal_Requests_List_Table
 WP_Privacy_Data_Removal_Requests_Table
 WP_Privacy_Policy_Content
 WP_Privacy_Requests_Table
@@ -3877,6 +3880,7 @@ wpdb::hide_errors()
 wpdb::init_charset()
 wpdb::insert()
 wpdb::load_col_info()
+wpdb::log_query()
 wpdb::parse_db_host()
 wpdb::placeholder_escape()
 wpdb::prepare()
@@ -3958,6 +3962,13 @@ WP_Automatic_Updater::send_debug_email()
 WP_Automatic_Updater::send_email()
 WP_Automatic_Updater::should_update()
 WP_Automatic_Updater::update()
+WP_Block_Styles_Registry::get_all_registered()
+WP_Block_Styles_Registry::get_instance()
+WP_Block_Styles_Registry::get_registered()
+WP_Block_Styles_Registry::get_registered_styles_for_block()
+WP_Block_Styles_Registry::is_registered()
+WP_Block_Styles_Registry::register()
+WP_Block_Styles_Registry::unregister()
 WP_Block_Type::get_attributes()
 WP_Block_Type::is_dynamic()
 WP_Block_Type::prepare_attributes_for_render()
@@ -4712,11 +4723,3 @@ WP_Http_Cookie::getHeaderValue()
 WP_Http_Cookie::get_attributes()
 WP_Http_Cookie::test()
 WP_Http_Cookie::__construct()
-WP_Http_Curl::request()
-WP_Http_Curl::stream_body()
-WP_Http_Curl::stream_headers()
-WP_Http_Curl::test()
-WP_Http_Encoding::accept_encoding()
-WP_Http_Encoding::compatible_gzinflate()
-WP_Http_Encoding::compress()
-WP_Http_Encoding::content_encoding()

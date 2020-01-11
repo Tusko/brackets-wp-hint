@@ -1,4 +1,5 @@
 const mergeFiles = require("merge-files");
+const terminal = require("./terminal");
 
 const inputPathList = [
   __dirname + "/lists/wp.txt",
@@ -6,12 +7,12 @@ const inputPathList = [
   __dirname + "/lists/woocommerce.txt"
 ];
 
-console.log(__dirname);
+// console.log(__dirname);
 
 mergeFiles(inputPathList, __dirname + "/result.txt").then(status => {
   if (status) {
-    console.log("All Wordpress/ACF/WooCommerce functions up to date.");
+    terminal.log("All Wordpress/ACF/WooCommerce functions up to date.");
   } else {
-    console.log("Error. Please check input files");
+    terminal.log("🐞 ", "Error. Please check input files");
   }
 });
