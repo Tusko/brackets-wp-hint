@@ -31,7 +31,7 @@ Copyright (c) 2019, [Arsmoon](https://arsmoon.com/?utm_source=github&utm_medium=
 
 ## Donate
 
-[Support plugin](https://send.monobank.com.ua/QMnpw2tn "Support plugin")
+[Support plugin](https://donatua.com/@tusko "Support plugin")
 
 ---
 
